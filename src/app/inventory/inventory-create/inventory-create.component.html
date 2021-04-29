@@ -1,0 +1,80 @@
+<div class="container register">
+    <div class="row">
+        <div class="col-md-12 register-right">
+            <h3>Create New Inventory</h3>
+
+            <div class="row register-form">
+                <div class="col-md-12">
+                    <form class="form-horizontal" #f="ngForm" novalidate (ngSubmit)="f.form.valid && onSubmit()">
+
+                        <div class="form-group">
+                            <label>Name</label>
+                            <input type="text" class="form-control" #name="ngModel" required name="name"
+                                [(ngModel)]="invent.name" placeholder="Name *" value="" />
+
+                            <div *ngIf="name.errors && (name.dirty || name.touched)">
+                                <p class="text-danger" *ngIf="name.errors.required">Name is required</p>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Description</label>
+                            <textarea class="form-control" #description="ngModel" required name="description"
+                                [(ngModel)]="invent.description" placeholder="Description *" value="" rows="3"
+                                cols="40">
+                            </textarea>
+
+                            <div *ngIf="description.errors && (description.dirty || description.touched)">
+                                <p class="text-danger" *ngIf="description.errors.required">Description is required</p>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Type of Book</label>
+                            <select class="form-control" class="form-control" #type="ngModel" required name="type"
+                                [(ngModel)]="invent.type">
+                                <option selected disabled>Select Type of Book</option>
+                                <option value="Fiction">Fiction</option>
+                                <option value="Non-fiction">Non-fiction</option>
+                                <option value="Biographies">Biographies</option>
+                                <option value="Novels">Novels</option>
+                                <option value="Comic">Comic</option>
+                                <option value="Sci-Fi">Sci-Fi</option>
+                            </select>
+                            <div *ngIf="type.errors && (type.dirty || type.touched)">
+                                <p class="text-danger" *ngIf="type.errors.required">Type is required</p>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Price</label>
+                            <input type="number" class="form-control" #price="ngModel" required name="price"
+                                [(ngModel)]="invent.price" placeholder="Price *" value="" />
+
+                            <div *ngIf="price.errors && (price.dirty || price.touched)">
+                                <p class="text-danger" *ngIf="price.errors.required">Price is required</p>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Author</label>
+                            <input type="text" class="form-control" #author="ngModel" required name="author"
+                                [(ngModel)]="invent.author" placeholder="Author *" value="" />
+
+                            <div *ngIf="author.errors && (author.dirty || author.touched)">
+                                <p class="text-danger" *ngIf="author.errors.required">Author is required</p>
+                            </div>
+                        </div>
+                        <input type="submit" class="btn btn-success" value="Update" />
+                    </form>
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+</div>

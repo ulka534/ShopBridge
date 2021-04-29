@@ -1,0 +1,23 @@
+.register{
+    margin-top: 1%;
+    padding: 3%;
+}
+
+
+.register-right{
+    background: #92b3d4;
+    border-top-left-radius: 10% 5%;
+    border-bottom-left-radius: 10% 5%;
+    border-top-right-radius: 10% 5%;
+    border-bottom-right-radius: 10% 5%;
+}
+
+
+.register .register-form{
+    padding: 3%;
+}
+
+
+h3 {
+    text-align: center !important;
+  }

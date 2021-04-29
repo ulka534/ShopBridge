@@ -1,0 +1,24 @@
+<div class="container">
+
+    <table class="table table-bordered list">
+        <tr>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Author</th>
+            <th>Type</th>
+            <th>Price</th>
+            <th width="220px">Action</th>
+        </tr>
+        <tr *ngFor="let item of invents">
+            <td>{{ item.name }}</td>
+            <td>{{ item.description }}</td>
+            <td>{{ item.author }}</td>
+            <td>{{ item.type }}</td>
+            <td>{{ item.price }}</td>
+            <td>
+                <a [routerLink]="['/inventory-edit', item.id]" class="btn btn-primary">Modify</a>
+                <button (click)="delete(item.id)" class="btn btn-danger">Delete</button>
+            </td>
+        </tr>
+    </table>
+</div>
