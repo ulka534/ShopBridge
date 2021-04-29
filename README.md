@@ -2,13 +2,11 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.4.
 
-Clone or download the repo
+1. Clone or download the repo
 
-Run the command: npm install This will install all dependency required for project
+2. Run the command: npm install This will install all dependency required for project
 
-Run the command: ng serve This will run the project on browser url : http://localhost:4200
-
-If any issues Please raise.
+3. Run the command: ng serve This will run the project on browser url : http://localhost:4200
 
 ## Further help
 
